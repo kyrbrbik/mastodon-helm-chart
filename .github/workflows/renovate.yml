@@ -24,11 +24,11 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
 
       - name: Checkout
-        uses: actions/checkout@v5.0.1
+        uses: actions/checkout@v6.0.2
 
       - name: Self-hosted Renovate
         # renovate keeps itself up to date
-        uses: renovatebot/github-action@v43.0.20
+        uses: renovatebot/github-action@v44.2.6
         with:
           token: '${{ steps.get_token.outputs.token }}'
           configurationFile: .github/renovate-config.json
